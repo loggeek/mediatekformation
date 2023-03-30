@@ -1,0 +1,30 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{% endblock  %}
+{% block stylesheets %}{% endblock  %}
+{% block top %}
+    <div class="container">
+        <div class="text-center">
+            <h1>
+                <strong>Mediatek86 - Back Office</strong>
+            </h1>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('admin.formations') }}">Formations</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{{ path('admin.formations') }}">Playlists</a> <!--TODO: Change link-->
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{{ path('admin.formations') }}">Catégories</a> <!--TODO: Change link-->
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+{% endblock  %}                       
+{% block body %}{% endblock  %}
+{% block javascripts %}{% endblock  %}
