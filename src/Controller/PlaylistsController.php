@@ -78,7 +78,7 @@ class PlaylistsController extends AbstractController
                 $playlists = $this->playlistRepository->findAllOrderByName($ordre);
         }
         $categories = $this->categorieRepository->findAll();
-        return $this->render("pages/playlists.html.twig", [
+        return $this->render(self::PAGE_PLAYLISTS, [
             'playlists' => $playlists,
             'categories' => $categories
         ]);
