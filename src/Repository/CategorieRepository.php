@@ -39,6 +39,14 @@ class CategorieRepository extends ServiceEntityRepository
         }
     }
     
+    public function findAllOrderBy($champ, $ordre): array
+    {
+        return $this->createQueryBuilder('c')
+                ->orderBy('c.'.$champ, $ordre)
+                ->getQuery()
+                ->getResult();
+    }
+    
     /**
      * Retourne la liste des catégories des formations d'une playlist
      * @param type $idPlaylist
